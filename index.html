@@ -1,0 +1,36 @@
+<!--Developed by Arvin Poddar-->
+<html lang="en">
+
+<head>
+    <title>DashPad</title>
+    <!--<link rel="stylesheet" href="css/reset.min.css" />-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/github-markdown.css" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body onload="">
+    <div class="main">
+        <div id="editor">
+            <textarea id="input" placeholder="Write your markdown here..." oninput="saveFile();"></textarea>
+            <div id="pageOuter" class="hide">
+                <div id="page" class="markdown-body"></div>
+            </div>
+        </div>
+        <div id="sidebar">
+            <h1>DashPad Editor</h1>
+            <p>Type your markdown using standard sytnax into the box on the left, and then click the "Preview" button
+                below to test how it will look. When you're ready to download your file, click the "Save PDF" button.
+            </p>
+            <button onclick="preview()" class=" btn primary" id="preview">Preview</button>
+            <button onclick="printpdf();" class="btn primary">Save PDF</button>
+            <button onclick="clearAll();" class="btn danger">Clear All</button>
+        </div>
+    </div>
+
+    <script src="js/showdown.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
